@@ -174,20 +174,18 @@
             traceExample();
             break;
           case 'Trigger a Global Error':
-            nonExistentFunction(); // Triggers global error
+            nonExistentFunction();
             break;
         }
       });
     });
 
-    // Global error handler
     window.onerror = function (msg, url, line, col, error) {
       console.log("Global Error Caught:");
       console.log({ msg, url, line, col, error });
       return true;
     };
 
-    // Example of throwing and catching a custom error
     class CustomError extends Error {
       constructor(message) {
         super(message);
@@ -195,7 +193,6 @@
       }
     }
 
-    // Example to trigger the custom error
     try {
       throw new CustomError("This is a custom error!");
     } catch (e) {
