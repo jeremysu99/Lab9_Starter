@@ -121,16 +121,16 @@
       btn.addEventListener('click', () => {
         switch (btn.textContent) {
           case 'Console Log':
-            console.log("This is a log:", data);
+            console.log("Console Logging:", data);
             break;
           case 'Console Error':
-            console.error("This is an error message.");
+            console.error("Console Error-ing.");
             break;
           case 'Console Count':
             console.count("Button clicked");
             break;
           case 'Console Warn':
-            console.warn("This is a warning!");
+            console.warn("Console Warning:");
             break;
           case 'Console Assert':
             console.assert(false, "Assertion failed: condition is false");
@@ -146,14 +146,14 @@
             break;
           case 'Console Group Start':
             console.group("Grouped Messages");
-            console.log("Inside group 1");
-            console.log("Inside group 2");
+            console.log("Group 1");
+            console.log("Group 2");
             break;
           case 'Console Group End':
             console.groupEnd();
             break;
           case 'Console Table':
-            console.table([{ a: 1, b: 2 }, { a: 3, b: 4 }]);
+            console.table([{ jeremy: 1, powell: 2 }, { jeremy: 3, powell: 4 }]);
             break;
           case 'Start Timer':
             if (!timerStarted) {
@@ -169,7 +169,7 @@
             break;
           case 'Console Trace':
             function traceExample() {
-              console.trace("Trace Call");
+              console.trace("Console Trace Call");
             }
             traceExample();
             break;
